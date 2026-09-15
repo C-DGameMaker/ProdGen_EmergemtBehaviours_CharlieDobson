@@ -6,10 +6,10 @@ public class BallSpawner : MonoBehaviour
     public GameObject _ballPrefab;
     private Transform _spawnPoint;
 
-    private void Start()
+    private void Awake()
     {
         _spawnPoint = this.transform;
-        _amountOfBalls = Random.Range(100, 200);
+        _amountOfBalls = Random.Range(25, 50);
 
         for(int i = 0; i < _amountOfBalls; i++)
         {
