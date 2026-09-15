@@ -9,7 +9,7 @@ public class BallSpawner : MonoBehaviour
     private void Start()
     {
         _spawnPoint = this.transform;
-        _amountOfBalls = Random.Range(10, 25);
+        _amountOfBalls = Random.Range(100, 200);
 
         for(int i = 0; i < _amountOfBalls; i++)
         {
