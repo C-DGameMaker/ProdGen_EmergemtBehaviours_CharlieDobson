@@ -5,7 +5,7 @@ public class ColorChangingFloor : MonoBehaviour
     private Renderer _cubeRenderer;
     private float _timer;
 
-    public float _changeColor = 1f;
+    public float _changeColor = 0.5f;
 
     private void Start()
     {

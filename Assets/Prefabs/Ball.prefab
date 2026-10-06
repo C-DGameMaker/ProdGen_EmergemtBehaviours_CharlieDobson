@@ -128,8 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallRoller
   _speed: 1
-  ball: {fileID: 0}
-  targetPosition: {fileID: 3976487764246479310, guid: 687e628c28139d348b8ab8733d8f1746, type: 3}
+  targetPosition: {fileID: 2782904243055682675, guid: 687e628c28139d348b8ab8733d8f1746, type: 3}
 --- !u!114 &3858591267848826792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,8 +150,8 @@ Rigidbody:
   m_GameObject: {fileID: 1063843481875708862}
   serializedVersion: 5
   m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 1
+  m_AngularDamping: 5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -168,4 +167,4 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
