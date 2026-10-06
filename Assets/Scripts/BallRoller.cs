@@ -8,28 +8,19 @@ using UnityEngine.UIElements;
 public class BallRoller : MonoBehaviour
 {
     public float _speed = 1;
-    public Vector3 move;
+    public GameObject targetPosition;
 
     private void Awake()
     {
-        _speed = Random.Range(1, 5);
-
-        move = Random.insideUnitSphere;
-
-        if(move == Vector3.zero)
-        {
-            move = Vector3.left;
-        }
-        if (move == Vector3.up)
-        {
-            move = Vector3.right;
-        }
-
-        move = move.normalized;
-
+        _speed = Random.Range(1, 11);
+        _speed = _speed / 2;
     }
-    void Update()
-    { 
-        transform.position += move * _speed * Time.deltaTime;
+    void LateUpdate()
+    {
+       transform.position = Vector3.MoveTowards(transform.position, targetPosition.transform.position, _speed * Time.deltaTime);
+        
     }
+
+    
+
 }
