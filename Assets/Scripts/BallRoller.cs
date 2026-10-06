@@ -10,15 +10,18 @@ public class BallRoller : MonoBehaviour
     public float _speed = 1;
     public GameObject targetPosition;
 
+    private Rigidbody rb;
+    private Vector3 move;
+
     private void Awake()
     {
         _speed = Random.Range(1, 11);
-        _speed = _speed / 2;
+        rb = GetComponent<Rigidbody>();
     }
-    void LateUpdate()
+    void Update()
     {
-       transform.position = Vector3.MoveTowards(transform.position, targetPosition.transform.position, _speed * Time.deltaTime);
-        
+        move = targetPosition.transform.position - rb.position;
+        rb.AddForce(move * _speed, ForceMode.Force);
     }
 
     
